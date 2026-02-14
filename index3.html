@@ -16,15 +16,15 @@
             /* background-color: green; */
         }
 
-        .bg-purple{
+        .bg-purple {
             background-color: purple;
         }
 
-        .thin{
+        .thin {
             font-weight: 100;
         }
 
-        .big{
+        .big {
             font-size: 3em;
         }
 
@@ -59,7 +59,8 @@
 
         <section id="name-container">
             <h1>Names</h1>
-            <ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <span>Lorem, ipsum.</span>elit. Neque aspernatur non dolorem nihil?</p>
+            <ul id="namelist">
                 <li>abid</li>
                 <li>miraj</li>
                 <li>bitap</li>
@@ -73,6 +74,16 @@
 
         <section id="pet-container" class="names">
             <h1>pet Names</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis illum recusandae ut rem
+                hic, doloremque cumque ipsam eum voluptates?
+            </p>
+            <p>Lorem, ipsum dolor sit amet consectetur <span>Lorem ipsum dolor sit amet.</span>adipisicing elit. Labore,
+                totam.
+            </p>
+            <div>
+                <h2>example heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos vitae iure.</p>
+            </div>
             <ul>
                 <li>cat</li>
                 <li>dog</li>
@@ -116,13 +127,13 @@
 
             // use of query selector with loop
             const queryAll = document.querySelectorAll('#world p span');
-            for(const span of queryAll){
+            for (const span of queryAll) {
                 // console.log(span.innerText);
             }
 
             // query selector
             const query = document.querySelector('.favFoods .foreign');
-            for(const span of query){
+            for (const span of query) {
                 // console.log(span.innerText);
             }
         </script>
@@ -130,6 +141,7 @@
         <!-- connecting external js -->
         <script src="js/hello.js"></script>
         <script src="js/CSSinJS.js"></script>
+        <script src="js/child.js"></script>
     </main>
 </body>
 
