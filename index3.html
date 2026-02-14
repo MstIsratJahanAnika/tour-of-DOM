@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <!-- css -->
+    <style>
+        h1 {
+            color: cyan;
+        }
+
+        #food-title {
+            color: red;
+            /* background-color: green; */
+        }
+
+        .bg-purple{
+            background-color: purple;
+        }
+
+        .thin{
+            font-weight: 100;
+        }
+
+        .big{
+            font-size: 3em;
+        }
+
+        .favFoods .foreign {
+            font-weight: 700;
+        }
+    </style>
+    <!-- connecting external css -->
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>this is my header with no banner</h1>
+    </header>
+
+    <main>
+        <section id="game-container" class="names">
+            <h1>Game Names</h1>
+            <ul>
+                <li>Cricket</li>
+                <li>Football</li>
+                <!-- <li>Badminton</li> -->
+                <li>Gollachut</li>
+                <li>Table Tennis</li>
+                <!-- <li>Carrom</li> -->
+                <li>Churi-Dakati</li>
+
+            </ul>
+        </section>
+
+        <section id="name-container">
+            <h1>Names</h1>
+            <ul>
+                <li>abid</li>
+                <li>miraj</li>
+                <li>bitap</li>
+                <li>tetuli</li>
+                <li>kaya</li>
+                <li>nick</li>
+                <li>tripathi</li>
+
+            </ul>
+        </section>
+
+        <section id="pet-container" class="names">
+            <h1>pet Names</h1>
+            <ul>
+                <li>cat</li>
+                <li>dog</li>
+                <li>mouse</li>
+                <li>monkey</li>
+                <li>gorilla</li>
+                <li>hathi</li>
+                <li>manush</li>
+
+            </ul>
+        </section>
+        <!-- connecting javascript (immediate before main part end) -->
+        <script>
+
+
+            // document.getELementsByTagName('li');
+
+            const liCollection = document.getElementsByTagName('li');
+            // console.log(liCollection);
+
+            for (const li of liCollection) {
+                // console.log(li.innerText);
+            }
+
+            // all heading text 
+            const allHeadings = document.getElementsByTagName('h1');
+            for (const heading of allHeadings) {
+                // console.log(heading.innerText);
+            }
+
+
+            // elements by class name
+            const internationalGame = document.getElementsByClassName('notNative');
+            // console.log(internationalPlace.innerText);
+
+            const nativeGame = document.getElementsByClassName('native');
+            console.log(foreignFoods.innerText);
+            for (const game of nativeGame) {
+                // console.log(game.innerText);
+            }
+
+            // use of query selector with loop
+            const queryAll = document.querySelectorAll('#world p span');
+            for(const span of queryAll){
+                // console.log(span.innerText);
+            }
+
+            // query selector
+            const query = document.querySelector('.favFoods .foreign');
+            for(const span of query){
+                // console.log(span.innerText);
+            }
+        </script>
+
+        <!-- connecting external js -->
+        <script src="js/hello.js"></script>
+        <script src="js/CSSinJS.js"></script>
+    </main>
+</body>
+
+</html>
