@@ -10,6 +10,9 @@
         h1 {
             color: sandybrown;
         }
+        #food-title{
+            color: mediumvioletred;
+        }
     </style>
     <!-- connecting external css -->
     <link rel="stylesheet" href="styles/style.css">
@@ -27,12 +30,25 @@
             <ul>
                 <li>Shafayet</li>
                 <li>Bonobash</li>
-                <li>Jalali Set</li>
+                <li id="band">Jalali Set</li>
                 <li>DOM de re baba</li>
             </ul>
         </section>
 
-        
+        <section>
+            <h1 id="food-title">Foods I l Love</h1>
+            <ul>
+                <li>Biriyani</li>
+                <li>Vegetables</li>
+                <li class="foreign">Sea Foods</li>
+                <li>Beef Curry</li>
+                <li>Sweets</li>
+                <li class="foreign">Chips & Pasta</li>
+                <li class="foreign">Pizza</li>
+
+                <li class="international">Dubai</li>
+            </ul>
+        </section>
         <!-- connecting javascript (immediate before main part end) -->
         <script>
             console.log('Hello from Javascript');
@@ -63,6 +79,25 @@
                 console.log(heading.innerText);
             }
 
+            // get by ID
+            const foodTitleH1 = document.getElementById('food-title');
+            console.log(foodTitleH1);
+
+            const bandElement = document.getElementById('band');
+            bandElement.innerText = 'Jalali Sleeping Band';
+            console.log(bandElement);
+
+
+            // elements by class name
+            const internationalPlace = document.getElementsByClassName('international');
+            console.log(internationalPlace.innerText);
+
+            const foreignFoods = document.getElementsByClassName('foreign');
+            console.log(foreignFoods.innerText);
+
+            for(const food of foreignFoods){
+                console.log(food.innerText);
+            }
         </script>
 
         <!-- connecting external js -->
