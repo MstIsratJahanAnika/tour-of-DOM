@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <!-- css -->
+    <style>
+        h1 {
+            color: cyan;
+        }
+
+        #food-title {
+            color: red;
+            /* background-color: green; */
+        }
+
+        .bg-purple{
+            background-color: purple;
+        }
+
+        .thin{
+            font-weight: 100;
+        }
+
+        .big{
+            font-size: 3em;
+        }
+
+        .favFoods .foreign {
+            font-weight: 700;
+        }
+    </style>
+    <!-- connecting external css -->
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>this is my header ni banner</h1>
+    </header>
+
+    <main>
+        <section id="world" class="songs">
+
+            <h1>Welcome to my DOM</h1>
+            <h3>dfjfhe jihf <span>fhgru-some text</span></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora <span>Lorem ipsum dolor sit
+                amet.</span>consequatur temporibus rerum iste, obcaecati alias!
+            </p>
+            <p>Lorem, ipsum dolor sit amet <span>Lorem, Alias dolor.</span> consectetur adipisicing.</p>
+
+            <ul>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+                <li id="band">Jalali Set</li>
+                <li>DOM de re baba</li>
+                <li class="international">Dubai</li>
+
+                <li class="foreign">American</li>
+                <li class="foreign">Swidish</li>
+                <li class="foreign">Canadian</li>
+            </ul>
+        </section>
+
+        <section class="favFoods">
+            <h1 id="food-title">Foods I l Love</h1>
+            <ul>
+                <li>Biriyani</li>
+                <li>Vegetables</li>
+                <li class="foreign">Sea Foods</li>
+                <li>Beef Curry</li>
+                <li>Sweets</li>
+                <li class="foreign">Chips & Pasta</li>
+                <li class="foreign">Pizza</li>
+            </ul>
+        </section>
+        <!-- connecting javascript (immediate before main part end) -->
+        <script>
+
+
+            // document.getELementsByTagName('li');
+
+            const liCollection = document.getElementsByTagName('li');
+            console.log(liCollection);
+
+            for (const li of liCollection) {
+                console.log(li.innerText);
+            }
+
+            // all heading text 
+            const allHeadings = document.getElementsByTagName('h1');
+            for (const heading of allHeadings) {
+                console.log(heading.innerText);
+            }
+
+            // get by ID
+            const foodTitleH1 = document.getElementById('food-title');
+            console.log(foodTitleH1);
+
+            const bandElement = document.getElementById('band');
+            bandElement.innerText = 'Jalali Sleeping Band';
+            console.log(bandElement);
+
+
+            // elements by class name
+            const internationalPlace = document.getElementsByClassName('international');
+            console.log(internationalPlace.innerText);
+
+            const foreignFoods = document.getElementsByClassName('foreign');
+            console.log(foreignFoods.innerText);
+
+            for (const food of foreignFoods) {
+                console.log(food.innerText);
+            }
+
+            // use of query selector with loop
+            const queryAll = document.querySelectorAll('#world p span');
+            for(const span of queryAll){
+                console.log(span.innerText);
+            }
+
+            // query selector
+            const query = document.querySelector('.favFoods .foreign');
+            for(const span of query){
+                console.log(span.innerText);
+            }
+        </script>
+
+        <!-- connecting external js -->
+        <script src="js/hello.js"></script>
+    </main>
+</body>
+
+</html>
