@@ -10,8 +10,13 @@
         h1 {
             color: sandybrown;
         }
-        #food-title{
+
+        #food-title {
             color: mediumvioletred;
+        }
+
+        .favFoods .foreign {
+            font-weight: 700;
         }
     </style>
     <!-- connecting external css -->
@@ -25,17 +30,29 @@
     </header>
 
     <main>
-        <section>
+        <section id="world" class="songs">
+
             <h1>Welcome to my DOM</h1>
+            <h3>dfjfhe jihf <span>fhgru-some text</span></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora <span>Lorem ipsum dolor sit
+                amet.</span>consequatur temporibus rerum iste, obcaecati alias!
+            </p>
+            <p>Lorem, ipsum dolor sit amet <span>Lorem, Alias dolor.</span> consectetur adipisicing.</p>
+
             <ul>
                 <li>Shafayet</li>
                 <li>Bonobash</li>
                 <li id="band">Jalali Set</li>
                 <li>DOM de re baba</li>
+                <li class="international">Dubai</li>
+
+                <li class="foreign">American</li>
+                <li class="foreign">Swidish</li>
+                <li class="foreign">Canadian</li>
             </ul>
         </section>
 
-        <section>
+        <section class="favFoods">
             <h1 id="food-title">Foods I l Love</h1>
             <ul>
                 <li>Biriyani</li>
@@ -45,8 +62,6 @@
                 <li>Sweets</li>
                 <li class="foreign">Chips & Pasta</li>
                 <li class="foreign">Pizza</li>
-
-                <li class="international">Dubai</li>
             </ul>
         </section>
         <!-- connecting javascript (immediate before main part end) -->
@@ -95,8 +110,20 @@
             const foreignFoods = document.getElementsByClassName('foreign');
             console.log(foreignFoods.innerText);
 
-            for(const food of foreignFoods){
+            for (const food of foreignFoods) {
                 console.log(food.innerText);
+            }
+
+            // use of query selector with loop
+            const queryAll = document.querySelectorAll('#world p span');
+            for(const span of queryAll){
+                console.log(span.innerText);
+            }
+
+            // query selector
+            const query = document.querySelector('.favFoods .foreign');
+            for(const span of query){
+                console.log(span.innerText);
             }
         </script>
 
